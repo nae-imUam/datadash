@@ -1,0 +1,27 @@
+{% extends 'master.html' %}
+{% block head %}
+    <title>Chart</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@2.0.0/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+{% endblock %}
+{% block body %}
+{% load static %}
+<div class="">
+    <div class=" text-center">
+        <div class="col container-fluid" ><canvas style="max-width: 500px;" id="year_datas" class="m-3"></canvas></div>
+        <div class="col container-fluid" ><canvas style="max-width: 500px;" id="myChart" class="m-3 "></canvas></div>
+        <div class="col container-fluid" ><canvas style="max-width: 500px;" id="myintensity" class="m-3"></canvas></div>
+        <div class="col container-fluid" ><canvas style="max-width: 500px;" id="pubdata" class="m-3"></canvas></div>
+        <div class="col container-fluid" ><canvas style="max-width: 500px;" id="scatterdata" class="m-3"></canvas></div>
+    </div>
+    <div class="">
+        <div><canvas id="published_datas_line" class="m-3" style="max-width: 500px;"></canvas></div>
+        <div><canvas id="published_datas_pie" class="m-3" style="max-width: 500px;"></canvas></div>
+        <div><canvas id="published_datas_doughnut" class="m-3" style="max-width: 500px;"></canvas></div>
+    </div>
+</div>
+   
+    <script src="{% static 'chart.js' %}"></script>
+{% endblock %}
+                           

@@ -1,0 +1,60 @@
+.sidebar {
+    position: fixed;
+    top: 0px;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    padding: 48px 16px;
+    background-color: #f8f9fa;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+    transition: all 0.3s ease;
+    width: 220px; /* Fixed size of the sidebar */
+    height: 100%;
+    transition: 0.5s;
+}
+.closebtn {
+position: a;
+top: 0px;
+left: 40px;
+font-size: 50px;
+margin-left: 150px;
+color: red;
+}
+
+.main-content {
+    margin-left: 220px; /* Fixed size of the sidebar */
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 999.98px) {
+    /* Small devices (phones, 576px and up) */
+    .sidebar {
+        width: 220px;
+        height: auto;   
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+}
+::-webkit-scrollbar {
+width: 1px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+background: #f1f1f1; 
+border-radius: 1px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: #aaa; 
+border-radius: 1px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background: #999; 
+}
